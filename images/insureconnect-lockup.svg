@@ -1,0 +1,35 @@
+<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#372f9e"/>
+    </linearGradient>
+    <clipPath id="shieldClip">
+      <path d="M100,18 C100,18 138,28 168,42 L168,110 C168,150 138,176 100,194 C62,176 32,150 32,110 L32,42 C62,28 100,18 100,18 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Icon mark -->
+  <g transform="translate(20,20) scale(0.8)">
+    <path d="M100,18 C100,18 138,28 168,42 L168,110 C168,150 138,176 100,194 C62,176 32,150 32,110 L32,42 C62,28 100,18 100,18 Z"
+          fill="url(#shieldGradient)"/>
+    <g clip-path="url(#shieldClip)">
+      <path d="M38,122 L70,122 L82,93 L97,152 L109,103 L119,122 L162,122"
+            fill="none"
+            stroke="#2fae68"
+            stroke-width="9"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+      <circle cx="38" cy="122" r="5" fill="#2fae68"/>
+      <circle cx="162" cy="122" r="5" fill="#2fae68"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="210" y="118" font-family="'Hanken Grotesk', 'Segoe UI', Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1">
+    <tspan fill="#1f2430">Insure</tspan><tspan fill="#4338ca">Connect</tspan>
+  </text>
+  <text x="212" y="146" font-family="'Hanken Grotesk', 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="500" letter-spacing="2" fill="#6b7280">
+    REDEFINING HEALTH INSURANCE EFFICIENCY
+  </text>
+</svg>
