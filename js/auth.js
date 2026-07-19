@@ -12,7 +12,7 @@
   const VALID_PASSWORD = "12345";
 
   // Where to send the user after a successful login
-  const REDIRECT_URL = "index.html";
+  const REDIRECT_URL = "dashboard.html";
 
   document.addEventListener("DOMContentLoaded", function () {
     const loginBtn = document.getElementById("loginBtn");
