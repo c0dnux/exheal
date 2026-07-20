@@ -2072,52 +2072,78 @@
 
           <div class="row">
             <div class="col-lg-12">
-              <div
-                class="d-flex flex-wrap align-items-center justify-content-between mb-4"
-              >
-                <div
-                  class="d-flex flex-wrap align-items-center gap-3 mb-2 mb-sm-0"
+              <div class="d-flex flex-column gap-3 mb-4">
+                <!-- Filters + Apply, row 1 -->
+                <form
+                  class="d-flex flex-wrap align-items-end gap-3"
+                  role="search"
+                  aria-label="Leave filters"
                 >
-                  <select
-                    class="form-control default-select"
-                    style="min-width: 200px; width: auto"
+                  <div
+                    class="d-flex flex-column"
+                    style="max-width: 200px; width: 100%"
                   >
-                    <option selected disabled>Select Employee</option>
-                    <option value="EMP-1001">Mr. Bobby (EMP-1001)</option>
-                    <option value="EMP-1002">Jane Smith (EMP-1002)</option>
-                    <option value="EMP-1003">David Clark (EMP-1003)</option>
-                  </select>
+                    <label
+                      for="leaveEmployeeSelect"
+                      class="form-label small text-muted mb-1"
+                      >Employee</label
+                    >
+                    <select
+                      id="leaveEmployeeSelect"
+                      class="form-control default-select"
+                    >
+                      <option selected disabled>Select Employee</option>
+                      <option value="EMP-1001">Mr. Bobby (EMP-1001)</option>
+                      <option value="EMP-1002">Jane Smith (EMP-1002)</option>
+                      <option value="EMP-1003">David Clark (EMP-1003)</option>
+                    </select>
+                  </div>
 
-                  <div class="input-group" style="width: auto">
-                    <span class="input-group-text bg-white">Start</span>
+                  <div class="d-flex flex-column">
+                    <label
+                      for="leaveStartDate"
+                      class="form-label small text-muted mb-1"
+                      >Start Date</label
+                    >
                     <input
+                      id="leaveStartDate"
                       type="date"
                       class="form-control"
                       title="Start Date"
                     />
                   </div>
 
-                  <div class="input-group" style="width: auto">
-                    <span class="input-group-text bg-white">End</span>
-                    <input type="date" class="form-control" title="End Date" />
+                  <div class="d-flex flex-column">
+                    <label
+                      for="leaveEndDate"
+                      class="form-label small text-muted mb-1"
+                      >End Date</label
+                    >
+                    <input
+                      id="leaveEndDate"
+                      type="date"
+                      class="form-control"
+                      title="End Date"
+                    />
                   </div>
 
                   <button type="button" class="btn btn-primary text-white">
                     Apply Filters
                   </button>
-                </div>
+                </form>
 
-                <div class="d-flex gap-2 mt-3 mt-lg-0">
+                <!-- Actions, row 2 -->
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="fa fa-download me-1"></i> Export Report
+                  </button>
                   <button
                     type="button"
                     class="btn btn-primary text-white"
                     data-bs-toggle="modal"
                     data-bs-target="#addLeaveModal"
                   >
-                    + Add New Leave
-                  </button>
-                  <button type="button" class="btn btn-outline-primary">
-                    Export Report
+                    <i class="fa fa-plus me-1"></i> Add New Leave
                   </button>
                 </div>
               </div>

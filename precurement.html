@@ -2072,59 +2072,86 @@
 
           <div class="row">
             <div class="col-lg-12">
-              <div
-                class="d-flex flex-wrap align-items-center justify-content-between mb-4"
-              >
-                <div
-                  class="d-flex flex-wrap align-items-center gap-3 mb-2 mb-sm-0"
+              <div class="d-flex flex-column gap-3 mb-4">
+                <!-- Filters + Apply, row 1 -->
+                <form
+                  class="d-flex flex-wrap align-items-end gap-3"
+                  role="search"
+                  aria-label="Invoice filters"
                 >
-                  <select
-                    class="form-control default-select"
-                    style="min-width: 200px; width: auto"
+                  <div
+                    class="d-flex flex-column"
+                    style="max-width: 200px; width: 100%"
                   >
-                    <option selected disabled>Select Department</option>
-                    <option value="IT">IT & Engineering</option>
-                    <option value="HR">Human Resources</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Operations">Operations</option>
-                  </select>
+                    <label
+                      for="invoiceDepartmentSelect"
+                      class="form-label small text-muted mb-1"
+                      >Department</label
+                    >
+                    <select
+                      id="invoiceDepartmentSelect"
+                      class="form-control default-select"
+                    >
+                      <option selected disabled>Select Department</option>
+                      <option value="IT">IT & Engineering</option>
+                      <option value="HR">Human Resources</option>
+                      <option value="Finance">Finance</option>
+                      <option value="Operations">Operations</option>
+                    </select>
+                  </div>
 
-                  <select
-                    class="form-control default-select"
-                    style="min-width: 180px; width: auto"
+                  <div
+                    class="d-flex flex-column"
+                    style="max-width: 180px; width: 100%"
                   >
-                    <option selected disabled>Select Type</option>
-                    <option value="Software">Software Licensing</option>
-                    <option value="Hardware">Hardware/Equipment</option>
-                    <option value="Services">Consulting/Services</option>
-                    <option value="Supplies">Office Supplies</option>
-                  </select>
+                    <label
+                      for="invoiceTypeSelect"
+                      class="form-label small text-muted mb-1"
+                      >Type</label
+                    >
+                    <select
+                      id="invoiceTypeSelect"
+                      class="form-control default-select"
+                    >
+                      <option selected disabled>Select Type</option>
+                      <option value="Software">Software Licensing</option>
+                      <option value="Hardware">Hardware/Equipment</option>
+                      <option value="Services">Consulting/Services</option>
+                      <option value="Supplies">Office Supplies</option>
+                    </select>
+                  </div>
 
-                  <div class="input-group" style="width: auto">
-                    <span class="input-group-text bg-white">Date</span>
+                  <div class="d-flex flex-column">
+                    <label
+                      for="invoiceDate"
+                      class="form-label small text-muted mb-1"
+                      >Date</label
+                    >
                     <input
+                      id="invoiceDate"
                       type="date"
                       class="form-control"
                       title="Select Date"
                     />
                   </div>
 
-                  <button type="button" class="btn btn-primary text-white">
+                  <button type="submit" class="btn btn-primary text-white">
                     Apply Filters
                   </button>
-                </div>
+                </form>
 
-                <div class="d-flex gap-2 mt-3 mt-lg-0">
+                <!-- Actions, row 2 -->
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="fa fa-download me-1"></i> Export Report
+                  </button>
                   <button
                     type="button"
                     class="btn btn-primary text-white"
                     data-bs-toggle="modal"
                     data-bs-target="#addInvoiceModal"
                   >
-                    + Add New Invoice
-                  </button>
-                  <button type="button" class="btn btn-outline-primary">
-                    Export Report
+                    <i class="fa fa-plus me-1"></i> Add New Invoice
                   </button>
                 </div>
               </div>

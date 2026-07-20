@@ -2073,43 +2073,69 @@
           <div class="row">
             <div class="col-lg-12">
               <div
-                class="d-flex flex-wrap align-items-center justify-content-between mb-4"
+                class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4"
               >
-                <div
-                  class="d-flex flex-wrap align-items-center gap-3 mb-2 mb-sm-0"
+                <!-- Filters -->
+                <form
+                  class="d-flex flex-wrap align-items-end gap-3"
+                  role="search"
+                  aria-label="Report filters"
                 >
-                  <select
-                    class="form-control default-select"
-                    style="min-width: 200px; width: auto"
-                  >
-                    <option selected disabled>Select Employee</option>
-                    <option value="EMP-1001">Mr. Bobby (EMP-1001)</option>
-                    <option value="EMP-1002">Jane Smith (EMP-1002)</option>
-                    <option value="EMP-1003">David Clark (EMP-1003)</option>
-                  </select>
+                  <div class="d-flex flex-column">
+                    <label
+                      for="employeeSelect"
+                      class="form-label small text-muted mb-1"
+                      >Employee</label
+                    >
+                    <select
+                      id="employeeSelect"
+                      class="form-control default-select"
+                      style="min-width: 200px; width: auto"
+                    >
+                      <option selected disabled>Select Employee</option>
+                      <option value="EMP-1001">Mr. Bobby (EMP-1001)</option>
+                      <option value="EMP-1002">Jane Smith (EMP-1002)</option>
+                      <option value="EMP-1003">David Clark (EMP-1003)</option>
+                    </select>
+                  </div>
 
-                  <div class="input-group" style="width: auto">
-                    <span class="input-group-text bg-white">Start</span>
+                  <div class="d-flex flex-column">
+                    <label
+                      for="startDate"
+                      class="form-label small text-muted mb-1"
+                      >Start Date</label
+                    >
                     <input
+                      id="startDate"
                       type="date"
                       class="form-control"
                       title="Start Date"
                     />
                   </div>
 
-                  <div class="input-group" style="width: auto">
-                    <span class="input-group-text bg-white">End</span>
-                    <input type="date" class="form-control" title="End Date" />
+                  <div class="d-flex flex-column">
+                    <label
+                      for="endDate"
+                      class="form-label small text-muted mb-1"
+                      >End Date</label
+                    >
+                    <input
+                      id="endDate"
+                      type="date"
+                      class="form-control"
+                      title="End Date"
+                    />
                   </div>
 
                   <button type="button" class="btn btn-primary text-white">
                     Apply Filters
                   </button>
-                </div>
+                </form>
 
+                <!-- Actions -->
                 <div class="d-flex gap-2">
                   <button type="button" class="btn btn-outline-primary">
-                    Export Report
+                    <i class="fa fa-download me-1"></i> Export Report
                   </button>
                 </div>
               </div>
